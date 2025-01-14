@@ -1,6 +1,6 @@
 # arrakis
 
-Names come from https://dune.fandom.com/wiki/Dune_(novel)
+Name and other arbitary info comes from my copy of Dune
 
 ## BIOS Notes
 Mobo Asus ROG STRIX B550-I GAMING
@@ -21,7 +21,7 @@ https://rog.asus.com/motherboards/rog-strix/rog-strix-b550-i-gaming-model/helpde
 ### Primary is 2TB NVME in front of mobo
 contains boot and home paritions
 
-names based on NixOS install
+Chose erase disk, swap no hibernate
 
 ### Secondary is 2TB NVME in back of mobo
 contains one partition for bulk storage
@@ -37,3 +37,15 @@ mount /dev/disk/by-label/NVME\\x20Storage '/mnt/NVME Storage'/
 ```
 then
 edit fstab
+
+## Manual Install 2025-01-13
+
+Set timezone info to Chicago
+
+Set keyboard to standard
+
+Install option was unfree
+
+Erased whole disk and installed with swap, no hibernate
+
+User password same as administrator
