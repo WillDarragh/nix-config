@@ -18,7 +18,7 @@
           nix.settings = {
 	    substituters = [ "https://cosmic.cachix.org/" ];
             trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBenWjrkPv6rtxpmMdRe102smYzA85dPE=" ];
-          }
+          };
         }
         nix-cosmic.nixosModules.default
         # Import configuration.nx
