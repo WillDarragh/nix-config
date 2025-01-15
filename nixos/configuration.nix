@@ -65,10 +65,18 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
+  # Enable Falkes and nix command line-tool
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    # Flakes requires git
+    git
+    vim
+    wget
   ];
+
+  # Default Editor
+  environment.variables.EDITOR = "vim";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -98,3 +106,4 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
+
