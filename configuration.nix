@@ -106,9 +106,15 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  /*
   # Cosmic desktop
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
+  */
 
+  # Gnome Desktop
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 }
 

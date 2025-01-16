@@ -12,20 +12,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Cosmic desktop
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    #nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-cosmic, ... }@inputs: {
     nixosConfigurations.arrakis = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        {
+        /*{
           nix.settings = {
 	    substituters = [ "https://cosmic.cachix.org/" ];
             trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBenWjrkPv6rtxpmMdRe102smYzA85dPE=" ];
           };
         }
         nixos-cosmic.nixosModules.default
+        */
         # Import configuration.nx
         ./configuration.nix
         # Make home-manager module of nixos
