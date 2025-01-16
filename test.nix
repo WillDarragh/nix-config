@@ -3,7 +3,9 @@
 
 {
 
-  programs = { floorp.enable = true; };
+  environment.systemPackages = [
+    pkgs.floorp
+  ];
 
 }
 
