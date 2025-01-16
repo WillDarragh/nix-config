@@ -5,12 +5,17 @@
   inputs = {
     # NixOS official package source
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-
+    # Home Mangaer
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.11";
+      # 'follow' is for fancy inheritance
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Cosmic desktop
     nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
   };
 
-  outputs = { self, nixpkgs, nixos-cosmic, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-cosmic, ... }@inputs: {
     nixosConfigurations.arrakis = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -23,6 +28,14 @@
         nixos-cosmic.nixosModules.default
         # Import configuration.nx
         ./configuration.nix
+        # Make home-manager module of nixos
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          # User
+          home-manager.users.will = import ./home.nix;
+        }
       ];
     };
   };
