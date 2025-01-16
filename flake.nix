@@ -28,11 +28,11 @@
         nixos-cosmic.nixosModules.default
         */
 
-        # Import configuration.nx
+        # Import configuration.nix
         ./configuration.nix
 
         # Host import
-        ./hosts/arrakis
+        ./test.nix
 
         # Make home-manager module of nixos
         home-manager.nixosModules.home-manager {
