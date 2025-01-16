@@ -27,8 +27,32 @@
         }
         nixos-cosmic.nixosModules.default
         */
+
         # Import configuration.nx
         ./configuration.nix
+
+        # Host import
+        ./hosts/arrakis
+
+        # Make home-manager module of nixos
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          # User
+          home-manager.users.will = import ./home.nix;
+        }
+      ];
+    };
+    nixosConfigurations.test = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        # Import configuration.nx
+        ./configuration.nix
+       
+        # Host import
+        ./hosts/test
+ 
         # Make home-manager module of nixos
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
