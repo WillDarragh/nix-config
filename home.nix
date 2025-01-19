@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     nmap
     btop
+    gh
   ];
 
   programs.git = {
