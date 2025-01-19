@@ -29,7 +29,7 @@
         */
 
         # Import configuration.nix
-        ./configuration.nix
+        .hosts/arrakis/configuration.nix
 
         # Host import
         ./test.nix
@@ -44,15 +44,24 @@
         }
       ];
     };
-    nixosConfigurations.test = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.caladan = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        # Import configuration.nx
-        ./configuration.nix
-       
+        /*{
+          nix.settings = {
+	    substituters = [ "https://cosmic.cachix.org/" ];
+            trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBenWjrkPv6rtxpmMdRe102smYzA85dPE=" ];
+          };
+        }
+        nixos-cosmic.nixosModules.default
+        */
+
+        # Import configuration.nix
+        .hosts/caladan/configuration.nix
+
         # Host import
-        ./hosts/test
- 
+        ./test.nix
+
         # Make home-manager module of nixos
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
