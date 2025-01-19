@@ -84,7 +84,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
-      caffiene
     ];
   };
 
