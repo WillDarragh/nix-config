@@ -43,7 +43,7 @@
           home-manager.users.will = import ./home.nix;
         }
       ];
-    };
+    }
     nixosConfigurations.caladan = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
