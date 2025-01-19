@@ -29,7 +29,7 @@
         */
 
         # Import configuration.nix
-        .hosts/arrakis/configuration.nix
+        ./hosts/arrakis/configuration.nix
 
         # Host import
         ./test.nix
@@ -57,7 +57,7 @@
         */
 
         # Import configuration.nix
-        .hosts/caladan/configuration.nix
+        ./hosts/caladan/configuration.nix
 
         # Host import
         ./test.nix
