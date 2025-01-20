@@ -31,9 +31,6 @@
         # Import configuration.nix
         ./hosts/arrakis/configuration.nix
 
-        # Host import
-        ./test.nix
-
         # Make home-manager module of nixos
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
@@ -58,9 +55,6 @@
 
         # Import configuration.nix
         ./hosts/caladan/configuration.nix
-
-        # Host import
-        ./test.nix
 
         # Make home-manager module of nixos
         home-manager.nixosModules.home-manager {
