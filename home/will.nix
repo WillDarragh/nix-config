@@ -6,11 +6,6 @@
 
   home.packages = with pkgs; [
     ##############
-    # Web Browsers
-    ##############
-    floorp
-
-    ##############
     # Networking
     ##############
     nmap
@@ -24,12 +19,20 @@
     # Other
     ##################
     gh
+    bitwarden-desktop
+    obsidian
   ];
 
+  # Git
   programs.git = {
     enable = true;
     userName = "Will Darragh";
     userEmail = "wdarragh16@gmail.com";
+  };
+
+  # Floorp
+  programs.floorp = {
+    enable = true;
   };
 
   home.stateVersion = "24.11";
