@@ -1,13 +1,28 @@
 
-{ config, pkgs, ... }:
+{ config, pkgs, ... }: {
 
-{
   home.username = "will";
   home.homeDirectory = "/home/will";
 
   home.packages = with pkgs; [
+    ##############
+    # Web Browsers
+    ##############
+    floorp
+
+    ##############
+    # Networking
+    ##############
     nmap
+
+    #############
+    # System Utitlities
+    #############
     btop
+    
+    ##################
+    # Other
+    ##################
     gh
   ];
 
