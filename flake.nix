@@ -37,7 +37,7 @@
           home-manager.useUserPackages = true;
 
           # User
-          home-manager.users.will = import ./users/will.nix;
+          home-manager.users.will = import ./home/will.nix;
         }
       ];
     };
@@ -62,7 +62,7 @@
           home-manager.useUserPackages = true;
 
           # User
-          home-manager.users.will = import ./user/will.nix;
+          home-manager.users.will = import ./home/will.nix;
         }
       ];
     };
