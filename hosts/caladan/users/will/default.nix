@@ -6,8 +6,8 @@
 
   imports = [
 
-    ../../../../modules/will/admin
-    ../../../../modules/will/desktop
+    ../../../../modules/users/will/programming
+    ../../../../modules/users/will/desktop
 
   ];
 
