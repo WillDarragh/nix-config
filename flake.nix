@@ -50,7 +50,7 @@
           home-manager.useUserPackages = true;
 
           # Home-manager
-          home-manager.users.will = import ./home/will.nix;
+          home-manager.users.will = import ./hosts/caladan/users/will;
         }
       ];
     };
