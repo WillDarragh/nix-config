@@ -11,38 +11,13 @@
 
   ];
 
-/*
   home.packages = with pkgs; [
-    ##############
-    # Networking
-    ##############
-    nmap
 
-    #############
-    # System Utitlities
-    #############
-    btop
-    
-    ##################
-    # Other
-    ##################
-    gh
-    bitwarden-desktop
-    obsidian
+    # Caffeine
+    caffeine-ng
+    gnomeExtensions.caffeine
+
   ];
-
-  # Git
-  programs.git = {
-    enable = true;
-    userName = "Will Darragh";
-    userEmail = "wdarragh16@gmail.com";
-  };
-
-  # Floorp
-  programs.floorp = {
-    enable = true;
-  };
-*/
 
   home.stateVersion = "24.11";
 
