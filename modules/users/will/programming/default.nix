@@ -41,14 +41,16 @@
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "nix.serverSettings" = {
-        "formatting" = {
-          "command" = ["nixfmt"];
-        };
-        "diagnostics" = {
-          "ignored" = [
-            "unused_binding"
-            "unused_with"
-          ];
+        "nil" = {
+          "formatting" = {
+            "command" = ["nixfmt"];
+          };
+          "diagnostics" = {
+            "ignored" = [
+              "unused_binding"
+              "unused_with"
+            ];
+          };
         };
       };
     };
