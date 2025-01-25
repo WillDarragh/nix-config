@@ -29,6 +29,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
 
           # Home-manager
           home-manager.users.will = import ./home/will.nix;
@@ -48,6 +49,7 @@
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
 
           # Home-manager
           home-manager.users.will = import ./hosts/caladan/users/will;
