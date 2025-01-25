@@ -44,6 +44,12 @@
         "formatting" = {
           "command" = ["nixfmt"];
         };
+        "diagnostics" = {
+          "ignored" = [
+            "unused_binding"
+            "unused_with"
+          ];
+        };
       };
     };
   };
