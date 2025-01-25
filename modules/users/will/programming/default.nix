@@ -6,6 +6,9 @@
     # Nix Formatter
     nixfmt-rfc-style
 
+    # Nix Language Server
+    nil
+
   ];
 
   # Git
@@ -33,6 +36,16 @@
       vscodevim.vim
       jnoortheen.nix-ide      
     ];
+    userSettings = {
+      "git.autoFetch" = true;
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
+      "nix.serverSettings" = {
+        "formatting" = {
+          "command" = ["nixfmt"];
+        };
+      };
+    };
   };
 
 }
