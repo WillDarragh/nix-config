@@ -1,3 +1,3 @@
 # Giedi Prime
 
-Mini PC used as a HTPC
+Beelink Mini PC used as a HTPC

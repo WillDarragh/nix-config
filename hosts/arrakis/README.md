@@ -1,6 +1,6 @@
 # arrakis
 
-Name and other arbitary info comes from my copy of Dune
+My SFF Desktop
 
 ## BIOS Notes
 Mobo Asus ROG STRIX B550-I GAMING
