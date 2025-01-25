@@ -1,8 +1,8 @@
-
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [
-  
+
     # Nix Formatter
     nixfmt-rfc-style
 
@@ -34,7 +34,7 @@
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
-      jnoortheen.nix-ide      
+      jnoortheen.nix-ide
     ];
     userSettings = {
       "git.autoFetch" = true;
@@ -43,7 +43,7 @@
       "nix.serverSettings" = {
         "nil" = {
           "formatting" = {
-            "command" = ["nixfmt"];
+            "command" = [ "nixfmt" ];
           };
           "diagnostics" = {
             "ignored" = [
@@ -57,4 +57,3 @@
   };
 
 }
-
