@@ -1,5 +1,5 @@
-
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.username = "will";
   home.homeDirectory = "/home/will";
@@ -11,17 +11,14 @@
 
   ];
 
-  home.packages = with pkgs; [
+  /*
+    home.packages = with pkgs; [
 
-    # Caffeine
-    caffeine-ng
-    gnomeExtensions.caffeine
-
-  ];
+    ];
+  */
 
   home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;
 
 }
-
