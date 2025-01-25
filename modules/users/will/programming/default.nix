@@ -2,9 +2,9 @@
 { config, pkgs, ... }: {
 
   home.packages = with pkgs; [
-
-    # Github
-    gh
+  
+    # Nix Formatter
+    nixfmt-rfc-style
 
   ];
 
@@ -13,6 +13,26 @@
     enable = true;
     userName = "Will Darragh";
     userEmail = "wdarragh16@gmail.com";
+  };
+
+  # Vim
+  programs.vim = {
+    enable = true;
+  };
+
+  # GitHub
+  programs.gh = {
+    enable = true;
+  };
+
+  # VSCodium
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium;
+    extensions = with pkgs.vscode-extensions; [
+      vscodevim.vim
+      
+    ];
   };
 
 }
