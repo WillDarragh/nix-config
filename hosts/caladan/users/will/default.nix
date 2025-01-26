@@ -8,6 +8,7 @@
 
     ../../../../modules/users/will/programming
     ../../../../modules/users/will/desktop
+    ../../../../modules/users/will/gnome
 
   ];
 

@@ -35,6 +35,7 @@
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       jnoortheen.nix-ide
+      christian-kohler.path-intellisense
     ];
     userSettings = {
       "git.autoFetch" = true;
