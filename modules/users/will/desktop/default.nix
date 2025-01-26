@@ -9,6 +9,9 @@
     # Obsdiain
     obsidian
 
+    # Discord client
+    legcord
+
  ];
 
   # Floorp
