@@ -32,7 +32,7 @@
           home-manager.backupFileExtension = "backup";
 
           # Home-manager
-          home-manager.users.will = import ./hosts/arrakis/users/will.nix;
+          home-manager.users.will = import ./hosts/arrakis/users/will;
         }
       ];
     };
