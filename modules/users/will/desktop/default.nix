@@ -20,7 +20,7 @@
   };
 
   # Spotify
-  programs.spotify = {
+  programs.spotify-player = {
     enable = true;
   };
 
