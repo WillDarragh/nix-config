@@ -1,43 +1,26 @@
-
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.username = "will";
   home.homeDirectory = "/home/will";
 
-  home.packages = with pkgs; [
-    ##############
-    # Networking
-    ##############
-    nmap
+  imports = [
 
-    #############
-    # System Utitlities
-    #############
-    btop
-    
-    ##################
-    # Other
-    ##################
-    gh
-    bitwarden-desktop
-    obsidian
+    ../../../../modules/users/will/programming
+    ../../../../modules/users/will/desktop
+    ../../../../modules/users/will/gnome
+    ../../../../modules/gaming
+
   ];
 
-  # Git
-  programs.git = {
-    enable = true;
-    userName = "Will Darragh";
-    userEmail = "wdarragh16@gmail.com";
-  };
+  /*
+    home.packages = with pkgs; [
 
-  # Floorp
-  programs.floorp = {
-    enable = true;
-  };
+    ];
+  */
 
   home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;
 
 }
-
