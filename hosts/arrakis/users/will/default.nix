@@ -9,6 +9,7 @@
     ../../../../modules/users/will/programming
     ../../../../modules/users/will/desktop
     ../../../../modules/users/will/gnome
+    ../../../../modules/users/will/art
     ../../../../modules/gaming
 
   ];
