@@ -19,4 +19,9 @@
     enable = true;
   };
 
+  # Spotify
+  programs.spotify = {
+    enable = true;
+  };
+
 } 
