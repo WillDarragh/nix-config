@@ -21,10 +21,4 @@
     enable = true;
   };
 
-  # Spotify-plyaer
-  /*
-  programs.spotify-player = {
-    enable = true;
-  };
-  */
 } 

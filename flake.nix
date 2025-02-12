@@ -13,6 +13,7 @@
       # 'follow' is for fancy inheritance
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
