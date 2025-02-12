@@ -1,6 +1,6 @@
 # nix-config
 
-*We suffer for actions of our ancestors*
+*There is no escape--We pay for the violence of our ancestors.*
 
 This is my nix config. The names are themed from the *Dune* book series.
 
