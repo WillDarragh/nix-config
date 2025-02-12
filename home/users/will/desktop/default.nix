@@ -14,11 +14,20 @@
 
     # Spotify
     spotify
+
  ];
 
-  # Floorp
-  programs.floorp = {
+  # Firesfox
+  programs.firefox = {
     enable = true;
+    profiles = {
+      default = {
+        name = "default";
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          privacy-badger
+        ];
+      };
+    };
   };
 
 } 
