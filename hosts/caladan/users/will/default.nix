@@ -6,10 +6,9 @@
 
   imports = [
 
-    ../../../../modules/users/will/programming
-    ../../../../modules/users/will/desktop
-    ../../../../modules/users/will/gnome
-    ../../../../modules/gaming
+    ../../../../home/users/will/programming
+    ../../../../home/users/will/desktop
+    ../../../../home/users/will/gnome
 
   ];
 

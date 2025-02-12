@@ -34,6 +34,7 @@
           # Home-manager
           home-manager.users.will = import ./hosts/arrakis/users/will;
 
+          # Steam
           programs.steam.enable = true;
         }
       ];
