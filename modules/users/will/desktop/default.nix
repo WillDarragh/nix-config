@@ -12,6 +12,8 @@
     # Discord client
     legcord
 
+    # Spotify
+    spotify
  ];
 
   # Floorp
@@ -19,9 +21,10 @@
     enable = true;
   };
 
-  # Spotify
+  # Spotify-plyaer
+  /*
   programs.spotify-player = {
     enable = true;
   };
-
+  */
 } 
