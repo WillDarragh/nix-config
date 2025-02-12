@@ -1,11 +1,17 @@
 { config, pkgs, ... }:
 {
 
+/*
   home.packages = with pkgs; [
 
-    # Steam
-    steam
-
   ];
+*/
+
+  /*
+  # Steam
+  programs.steam = {
+    enable = true;
+  };
+  */
 
 }
