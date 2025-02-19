@@ -1,5 +1,5 @@
-
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [
 
@@ -15,7 +15,7 @@
     # Spotify
     spotify
 
- ];
+  ];
 
   # Firesfox
   programs.firefox = {
@@ -35,21 +35,46 @@
         ];
         bookmarks = [
           {
-            name = "Test";
-            #tags = [""];
-            #keyword = "";
-            url = "www.google.com";
-            #toolbar = true;
-            #bookmarks = [];
+            name = "toolbar";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "Nix";
+                bookmarks = [
+                  {
+                    name = "Homepage";
+                    url = "https://nixos.org/";
+                  }
+                  {
+                    name = "Package Search";
+                    url = "https://search.nixos.org/packages";
+                  }
+                  {
+                    name = "Home Manager Option Search";
+                    url = "https://home-manager-options.extranix.com/?query=&release=release-24.11";
+                  }
+                ];
+              }
+            ];
           }
         ];
         search.default = "DuckDuckGo";
         search.force = true;
         settings = {
           "layout.css.devPixelsPerPx" = 1.5;
+          "browser.tabs.closeWindowWithLastTab" = false;
+          "extensions.pocket.enabled" = false;
+          "extensions.getAddons.showPane" = false;
+          "extensions.htmlaboutaddons.recommendations.enabled" = false;
+          "browser.preferences.moreFromMozilla" = false;
+          #"browser.urlbar.suggest.engines" = false;
+          "signon.rememberSignons" = false;
+          "signon.autfillForms" = false;
+          "services.sync.prefs.signon.autoFilForms" = false;
+          "services.sync.prefs.signong.rememberSignons" = false;
         };
       };
     };
   };
 
-} 
+}
