@@ -82,6 +82,9 @@
 
             # Home-manager
             home-manager.users.will = import ./hosts/caladan/users/will;
+
+            # Steam
+            programs.steam.enable = true;
           }
         ];
       };
