@@ -46,6 +46,10 @@
                     url = "https://nixos.org/";
                   }
                   {
+                    name = "Wiki";
+                    url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
+                  }
+                  {
                     name = "Package Search";
                     url = "https://search.nixos.org/packages";
                   }
