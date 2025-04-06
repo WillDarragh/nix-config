@@ -3,7 +3,6 @@
 
   imports = [
     ./../default.nix
-    ./../4k/default.nix
   ];
 
   /*
@@ -12,11 +11,13 @@
   ];
   */
 
-  dconf = {
-    enable = true;
-
-    settings = {
-      
+  programs.firefox = {
+    profiles = {
+      default = {
+        settings = {
+          "layout.css.devPixelsPerPx" = 2.5;
+        };
+      };
     };
   };
 
