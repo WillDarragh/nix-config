@@ -61,7 +61,7 @@
         search.default = "DuckDuckGo";
         search.force = true;
         settings = {
-          "layout.css.devPixelsPerPx" = 1.5;
+          #"layout.css.devPixelsPerPx" = 1.5;
           "browser.tabs.closeWindowWithLastTab" = false;
           "extensions.pocket.enabled" = false;
           "extensions.getAddons.showPane" = false;
