@@ -1,3 +1,3 @@
 # Giedi Prime
 
-Beelink Mini PC used as a HTPC
+Intel NUC Mini PC used as a HTPC
