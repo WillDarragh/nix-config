@@ -6,6 +6,7 @@
 
   imports = [
 
+    ../../../../hopme/users/will/programming
     ../../../../home/users/will/desktop/tv
     ../../../../home/users/will/gnome
 
