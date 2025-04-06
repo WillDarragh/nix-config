@@ -15,7 +15,7 @@
     profiles = {
       default = {
         settings = {
-          "layou.css.devPixelsPerPx" = 1.5;
+          "layout.css.devPixelsPerPx" = 1.5;
         };
       };
     };
