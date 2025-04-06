@@ -111,7 +111,7 @@
 
             # Home-manager
             home-manager.users.will = import ./hosts/giedi-prime/users/will;
-            home-manager.users.tv = import ./hosts/giedi-prime/userss/tv;
+            home-manager.users.tv = import ./hosts/giedi-prime/users/tv;
 
             # Steam
             programs.steam.enable = true;
