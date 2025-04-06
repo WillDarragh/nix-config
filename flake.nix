@@ -88,5 +88,35 @@
           }
         ];
       };
+
+      # Giedi-Prime (Intel NUC HTPC)
+      nixosConfigurations.giedi-prime = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+
+          # System configuration
+          ./hosts/giedi-prime/configuration.nix
+
+          # Adds the NUR overlay
+          nur.modules.nixos.default
+          # NUR modules to import
+          nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya
+        
+          # Make home-manager module of nixos
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+
+            # Home-manager
+            home-manager.users.will = import ./hosts/giedi-prime/users/will;
+            home-manager.users.tv = import ./hosts/giedi-prime/userss/tv;
+
+            # Steam
+            programs.steam.enable = true;
+          }
+        ];
+      };
     };
 }
