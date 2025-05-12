@@ -65,17 +65,20 @@
         search.default = "DuckDuckGo";
         search.force = true;
         settings = {
-          #"layout.css.devPixelsPerPx" = 1.5;
-          "browser.tabs.closeWindowWithLastTab" = false;
-          "extensions.pocket.enabled" = false;
-          "extensions.getAddons.showPane" = false;
-          "extensions.htmlaboutaddons.recommendations.enabled" = false;
-          "browser.preferences.moreFromMozilla" = false;
-          #"browser.urlbar.suggest.engines" = false;
-          "signon.rememberSignons" = false;
-          "signon.autfillForms" = false;
-          "services.sync.prefs.signon.autoFilForms" = false;
-          "services.sync.prefs.signong.rememberSignons" = false;
+          "browser.tabs.closeWindowWithLastTab" = false; # Do not close window on last tabe
+          "browser.preferences.moreFromMozilla" = false; # Do not show firefox suggestions
+
+          "extensions.pocket.enabled" = false; # Disable pocket
+          "extensions.getAddons.showPane" = false; # Disable addons suggestions
+          "extensions.htmlaboutaddons.recommendations.enabled" = false; # Disable web recommendations
+          "extensions.formautofill.addresses.enabled" = false; # Disable address manager
+          "extensions.formautofill.creditCards.enabled" = false; # Disable credit card manager
+
+          "signon.rememberSignons" = false; # Do not remember signons
+          "signon.autfillForms" = false; # Do not autfill forms
+
+          "services.sync.prefs.signon.autoFilForms" = false; # Do not sync forms
+          "services.sync.prefs.signong.rememberSignons" = false; # Do not sync signons
         };
       };
     };
