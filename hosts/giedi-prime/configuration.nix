@@ -86,6 +86,11 @@
     #  thunderbird
     ];
   };
+  # TV User
+  users.users.tv = {
+    isNormalUser = true;
+    description = "TV";
+  };
 
   # Install firefox.
   programs.firefox.enable = true;

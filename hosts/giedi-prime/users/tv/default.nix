@@ -19,4 +19,14 @@
 
   programs.home-manager.enable = true;
 
+  programs.firefox = {
+    profiles = {
+      default = {
+        settings = {
+          "layout.css.devPixelsPerPx" = 4.0;
+        };
+      };
+    };
+  };
+
 }

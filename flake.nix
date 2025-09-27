@@ -114,7 +114,7 @@
 
             # Home-manager
             home-manager.users.will = import ./hosts/giedi-prime/users/will;
-            #home-manager.users.tv = import ./hosts/giedi-prime/users/tv;
+            home-manager.users.tv = import ./hosts/giedi-prime/users/tv;
           }
         ];
       };
