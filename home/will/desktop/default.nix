@@ -68,7 +68,7 @@
         search.default = "DuckDuckGo";
         search.force = true;
         settings = {
-          "browser.tabs.closeWindowWithLastTab" = false; # Do not close window on last tabe
+          "browser.tabs.closeWindowWithLastTab" = false; # Do not close window on last tab
           "browser.preferences.moreFromMozilla" = false; # Do not show firefox suggestions
 
           "extensions.pocket.enabled" = false; # Disable pocket
