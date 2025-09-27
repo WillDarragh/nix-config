@@ -36,13 +36,16 @@
         system = "x86_64-linux";
         modules = [
 
-          # System configuration
-          ./hosts/arrakis/configuration.nix
-
           # Adds the NUR overlay
           nur.modules.nixos.default
           # NUR modules to import
           nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya
+
+          # System configuration
+          ./hosts/arrakis/configuration.nix
+
+          # Modules
+          ./modules/gaming
 
           # Make home-manager module of nixos
           home-manager.nixosModules.home-manager
@@ -53,9 +56,6 @@
 
             # Home-manager
             home-manager.users.will = import ./hosts/arrakis/users/will;
-
-            # Steam
-            programs.steam.enable = true;
           }
         ];
       };
@@ -65,14 +65,17 @@
         system = "x86_64-linux";
         modules = [
 
-          # System configuration
-          ./hosts/caladan/configuration.nix
-
           # Adds the NUR overlay
           nur.modules.nixos.default
           # NUR modules to import
           nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya
         
+          # System configuration
+          ./hosts/caladan/configuration.nix
+
+          # Modules
+          ./modules/gaming
+           
           # Make home-manager module of nixos
           home-manager.nixosModules.home-manager
           {
@@ -82,9 +85,6 @@
 
             # Home-manager
             home-manager.users.will = import ./hosts/caladan/users/will;
-
-            # Steam
-            programs.steam.enable = true;
           }
         ];
       };
@@ -94,14 +94,17 @@
         system = "x86_64-linux";
         modules = [
 
-          # System configuration
-          ./hosts/giedi-prime/configuration.nix
-
           # Adds the NUR overlay
           nur.modules.nixos.default
           # NUR modules to import
           nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya
-        
+          
+          # System configuration
+          ./hosts/giedi-prime/configuration.nix
+ 
+          # Modules
+          ./modules/gaming
+
           # Make home-manager module of nixos
           home-manager.nixosModules.home-manager
           {
@@ -112,9 +115,6 @@
             # Home-manager
             home-manager.users.will = import ./hosts/giedi-prime/users/will;
             #home-manager.users.tv = import ./hosts/giedi-prime/users/tv;
-
-            # Steam
-            programs.steam.enable = true;
           }
         ];
       };

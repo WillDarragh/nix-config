@@ -10,8 +10,12 @@ Host specifc configuration
 
 ## modules
 
-Modularized nix files
+Modularized nix files.
 
-### home
+These are system-level modules that can be reused accross hosts.
 
-Modules used by home manager
+## home
+
+Modularized user nix files.
+
+These are user-level modules that are added via home-manager.
