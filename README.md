@@ -12,6 +12,6 @@ Host specifc configuration
 
 Modularized nix files
 
-### users
+### home
 
-Modules used by a specific user
+Modules used by home manager

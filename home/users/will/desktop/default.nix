@@ -57,6 +57,9 @@
                     name = "Home Manager Option Search";
                     url = "https://home-manager-options.extranix.com/?query=&release=release-24.11";
                   }
+                  { name = "NixOS & Flakes Book";
+                    url = "https://nixos-and-flakes.thiscute.world";
+                  }
                 ];
               }
             ];
