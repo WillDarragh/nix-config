@@ -6,10 +6,10 @@
 
   imports = [
 
-    ../../../../home/users/will/programming
-    ../../../../home/users/will/desktop/4k
-    ../../../../home/users/will/gnome
-    ../../../../home/users/will/art
+    ../../../../home/will/programming
+    ../../../../home/will/desktop/4k
+    ../../../../home/will/gnome
+    ../../../../home/will/art
 
   ];
 

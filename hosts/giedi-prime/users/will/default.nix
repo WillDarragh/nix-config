@@ -6,9 +6,9 @@
 
   imports = [
 
-    ../../../../home/users/will/programming
-    ../../../../home/users/will/desktop/tv
-    ../../../../home/users/will/gnome
+    ../../../../home/will/programming
+    ../../../../home/will/desktop/tv
+    ../../../../home/will/gnome
 
   ];
 

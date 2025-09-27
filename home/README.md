@@ -1,3 +1,3 @@
 # home
 
-Contains home manager modules
+Contains user-level modules
