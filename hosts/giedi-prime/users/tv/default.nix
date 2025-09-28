@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
 
   home.username = "tv";
@@ -19,6 +19,14 @@
 
   programs.home-manager.enable = true;
 
+  # Gnome Scaling
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      scaling-factor = lib.hm.gvariant.mkUint32 2;
+    };
+  };
+
+  # Firefox 
   programs.firefox = {
     enable = true;
     profiles = {
