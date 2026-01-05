@@ -24,6 +24,18 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable Wake-on-Lan
+  networking = {
+    interfaces = {
+      enp7s0 = {
+        wakeOnLan.enable = true;
+      };
+    };
+    firewall = {
+      allowedUDPPorts = [ 9 ];
+    };
+  };
+
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
