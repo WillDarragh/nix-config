@@ -20,8 +20,12 @@
     };
 
     # NixOS Cosmic
-    nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    #nixpkgs.follows = "nixos-cosmic/nixpkgs";
     #nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    #nixos-cosmic = {
+    #  url = "github:lilyinstarlight/nixos-cosmic";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
   };
 
@@ -31,7 +35,7 @@
       nixpkgs,
       home-manager,
       nur,
-      nixos-cosmic,
+      #nixos-cosmic,
       ...
     }@inputs:
     {
@@ -64,13 +68,13 @@
           }
 
           # Cosmic Desktop Environment
-          {
-            nix.settings = {
-              substituters = [ "https://cosmic.cachix.org/" ];
-              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-            };
-          }
-          nixos-cosmic.nixosModules.default
+          #{
+            #nix.settings = {
+              #substituters = [ "https://cosmic.cachix.org/" ];
+              #trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            #};
+          #}
+          #nixos-cosmic.nixosModules.default
         ];
       };
 
