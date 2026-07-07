@@ -21,7 +21,7 @@
 
     # NixOS Cosmic
     nixpkgs.follows = "nixos-cosmic/nixpkgs";
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    #nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 
   };
 
@@ -31,7 +31,7 @@
       nixpkgs,
       home-manager,
       nur,
-      #nixos-cosmic,
+      nixos-cosmic,
       ...
     }@inputs:
     {
