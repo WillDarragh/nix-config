@@ -71,27 +71,32 @@
           force = true;
           settings = [
           {
-            name = "Nix";
+            name = "toolbar";
             toolbar = true;
             bookmarks = [
               {
-                name = "Homepage";
-                url = "https://nixos.org/";
-              }
-              {
-                name = "Wiki";
-                url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
-              }
-              {
-                name = "Package Search";
-                url = "https://search.nixos.org/packages";
-              }
-              {
-                name = "Home Manager Option Search";
-                url = "https://home-manager-options.extranix.com/?query=&release=release-24.11";
-              }
-              { name = "NixOS & Flakes Book";
-                url = "https://nixos-and-flakes.thiscute.world";
+                name = "Nix";
+                bookmarks = [
+                  {
+                    name = "Homepage";
+                    url = "https://nixos.org/";
+                  }
+                  {
+                    name = "Wiki";
+                    url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
+                  }
+                  {
+                    name = "Package Search";
+                    url = "https://search.nixos.org/packages";
+                  }
+                  {
+                    name = "Home Manager Option Search";
+                    url = "https://home-manager-options.extranix.com/?query=&release=release-24.11";
+                  }
+                  { name = "NixOS & Flakes Book";
+                    url = "https://nixos-and-flakes.thiscute.world";
+                  }
+                ];
               }
             ];
           }
