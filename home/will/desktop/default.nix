@@ -18,7 +18,7 @@
   ];
 
   # Firefox
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
 
     policies = {
@@ -70,39 +70,40 @@
         bookmarks = {
           force = true;
           settings = [
-            {
-              name = "Nix";
-              toolbar = true;
-              bookmarks = [
-            {
-              name = "Homepage";
-              url = "https://nixos.org/";
-            }
-            {
-              name = "Wiki";
-              url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
-            }
-            {
-              name = "Package Search";
-              url = "https://search.nixos.org/packages";
-            }
-            {
-              name = "Home Manager Option Search";
-              url = "https://home-manager-options.extranix.com/?query=&release=release-24.11";
-            }
-            { name = "NixOS & Flakes Book";
-              url = "https://nixos-and-flakes.thiscute.world";
-            }
+          {
+            name = "Nix";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "Homepage";
+                url = "https://nixos.org/";
+              }
+              {
+                name = "Wiki";
+                url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
+              }
+              {
+                name = "Package Search";
+                url = "https://search.nixos.org/packages";
+              }
+              {
+                name = "Home Manager Option Search";
+                url = "https://home-manager-options.extranix.com/?query=&release=release-24.11";
+              }
+              { name = "NixOS & Flakes Book";
+                url = "https://nixos-and-flakes.thiscute.world";
+              }
             ];
-            }
+          }
           ];
         };
-        search.force = true;
-        search.default = "ddg";
-        search.privateDefault = "ddg";
-        settings = {
-          "browser.tabs.closeWindowWithLastTab" = false; # Do not close window on last tab
-          "browser.preferences.moreFromMozilla" = false; # Do not show firefox suggestions
+        };
+        #search.force = true;
+        #search.default = "DuckDuckGo";
+        #search.privateDefault = "DuckDuckGo";
+        /*settings = {
+          #"browser.tabs.closeWindowWithLastTab" = false; # Do not close window on last tab
+          #"browser.preferences.moreFromMozilla" = false; # Do not show firefox suggestions
 
           "extensions.pocket.enabled" = false; # Disable pocket
           "extensions.getAddons.showPane" = false; # Disable addons suggestions
@@ -115,10 +116,8 @@
 
           "services.sync.prefs.signon.autoFilForms" = false; # Do not sync forms
           "services.sync.prefs.signong.rememberSignons" = false; # Do not sync signons
-        };
+        };*/
       };
     };
-  };
-
 
 }
