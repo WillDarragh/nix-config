@@ -4,13 +4,13 @@
   home.packages = with pkgs; [
 
     # Bitwarden
-    bitwarden-desktop
+    #bitwarden-desktop
 
     # Obsdiain
     obsidian
 
     # Discord client
-    legcord
+    vesktop
 
     # Spotify
     spotify

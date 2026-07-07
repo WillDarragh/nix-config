@@ -7,7 +7,7 @@
   imports = [
 
     ../../../../home/will/programming
-    #../../../../home/will/desktop/4k
+    ../../../../home/will/desktop/4k
     #../../../../home/will/gnome
     ../../../../home/will/art
 
