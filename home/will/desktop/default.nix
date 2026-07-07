@@ -98,6 +98,23 @@
                   }
                 ];
               }
+              {
+                name = "Default";
+                bookmarks = [
+                  {
+                    name = "Gmail";
+                    url = "https://mail.google.com/mail/u/0/#inbox";
+                  }
+                  {
+                    name = "ProtonMail";
+                    url = "https://mail.proton.me/u/0/inbox";
+                  }
+                  {
+                    name = "YouTube";
+                    url = "https://www.youtube.com/";
+                  }
+                ];
+              }
             ];
           }
           ];
