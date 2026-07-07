@@ -7,8 +7,8 @@
   imports = [
 
     ../../../../home/will/programming
-    ../../../../home/will/desktop/4k
-    ../../../../home/will/gnome
+    #../../../../home/will/desktop/4k
+    #../../../../home/will/gnome
     ../../../../home/will/art
 
   ];
@@ -19,7 +19,7 @@
     ];
   */
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "26.05";
 
   programs.home-manager.enable = true;
 

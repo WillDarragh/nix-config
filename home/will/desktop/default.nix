@@ -25,14 +25,14 @@
         name = "default";
         id = 0;
         isDefault = true;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
-          bitwarden
-          proton-pass
-          darkreader
-          vimium
-          facebook-container
-        ];
+        #extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          #ublock-origin
+          #bitwarden
+          #proton-pass
+          #darkreader
+          #vimium
+          #facebook-container
+        #];
         bookmarks = [
           {
             name = "toolbar";

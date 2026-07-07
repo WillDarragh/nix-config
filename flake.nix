@@ -4,11 +4,11 @@
   inputs = {
 
     # NixOS official package source
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     # Home Mangaer
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-26.05";
       # 'follow' is for fancy inheritance
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -19,6 +19,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # NixOS Cosmic
+    nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+
   };
 
   outputs =
@@ -27,6 +31,7 @@
       nixpkgs,
       home-manager,
       nur,
+      #nixos-cosmic,
       ...
     }@inputs:
     {
@@ -57,6 +62,15 @@
             # Home-manager
             home-manager.users.will = import ./hosts/arrakis/users/will;
           }
+
+          # Cosmic Desktop Environment
+          {
+            nix.settings = {
+              substituters = [ "https://cosmic.cachix.org/" ];
+              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            };
+          }
+          nixos-cosmic.nixosModules.default
         ];
       };
 
