@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
 
     # Nix Formatter
-    nixfmt-rfc-style
+    nixfmt
 
     # Nix Language Server
     nil
@@ -14,8 +14,10 @@
   # Git
   programs.git = {
     enable = true;
-    userName = "Will Darragh";
-    userEmail = "wdarragh16@gmail.com";
+    settings = {
+    user.name = "Will Darragh";
+    user.email = "wdarragh16@gmail.com";
+    };
   };
 
   # Vim
@@ -29,9 +31,10 @@
   };
 
   # VSCodium
-  programs.vscode = {
+  programs.vscodium = {
     enable = true;
     package = pkgs.vscodium;
+    profiles.default = {
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       jnoortheen.nix-ide
@@ -54,6 +57,7 @@
           };
         };
       };
+    };
     };
   };
 
