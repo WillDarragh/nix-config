@@ -18,7 +18,7 @@
   ];
 
   # Firefox
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
 
     policies = {
@@ -119,13 +119,12 @@
           }
           ];
         };
-        };
-        #search.force = true;
-        #search.default = "DuckDuckGo";
-        #search.privateDefault = "DuckDuckGo";
-        /*settings = {
-          #"browser.tabs.closeWindowWithLastTab" = false; # Do not close window on last tab
-          #"browser.preferences.moreFromMozilla" = false; # Do not show firefox suggestions
+        search.force = true;
+        search.default = "ddg";
+        search.privateDefault = "ddg";
+        settings = {
+          "browser.tabs.closeWindowWithLastTab" = false; # Do not close window on last tab
+          "browser.preferences.moreFromMozilla" = false; # Do not show firefox suggestions
 
           "extensions.pocket.enabled" = false; # Disable pocket
           "extensions.getAddons.showPane" = false; # Disable addons suggestions
@@ -138,8 +137,9 @@
 
           "services.sync.prefs.signon.autoFilForms" = false; # Do not sync forms
           "services.sync.prefs.signong.rememberSignons" = false; # Do not sync signons
-        };*/
+        };
       };
     };
+  };
 
 }
