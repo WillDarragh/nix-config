@@ -15,7 +15,7 @@
     ];
   */
 
-  #home.stateVersion = "unstable";
+  home.stateVersion = "26.11";
 
   programs.home-manager.enable = true;
 
@@ -27,12 +27,14 @@
         name = "default";
         id = 0;
         isDefault = true;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
-          bitwarden
-          darkreader
-          facebook-container
-        ];
+        extensions = {
+          packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            ublock-origin
+            bitwarden
+            darkreader
+            facebook-container
+          ];
+        };
         search.default = "DuckDuckGo";
         search.force = true;
         settings = {
