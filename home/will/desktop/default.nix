@@ -22,6 +22,7 @@
     enable = true;
 
     policies = {
+      NoDefaultBookmarks = true;
       ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
           default_area = "navbar";
@@ -67,58 +68,6 @@
         name = "default";
         id = 0;
         isDefault = true;
-        bookmarks = {
-          force = true;
-          settings = [
-          {
-            name = "toolbar";
-            toolbar = true;
-            bookmarks = [
-              {
-                name = "Nix";
-                bookmarks = [
-                  {
-                    name = "Homepage";
-                    url = "https://nixos.org/";
-                  }
-                  {
-                    name = "Wiki";
-                    url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
-                  }
-                  {
-                    name = "Package Search";
-                    url = "https://search.nixos.org/packages";
-                  }
-                  {
-                    name = "Home Manager Option Search";
-                    url = "https://home-manager-options.extranix.com/?query=&release=release-24.11";
-                  }
-                  { name = "NixOS & Flakes Book";
-                    url = "https://nixos-and-flakes.thiscute.world";
-                  }
-                ];
-              }
-              {
-                name = "Default";
-                bookmarks = [
-                  {
-                    name = "Gmail";
-                    url = "https://mail.google.com/mail/u/0/#inbox";
-                  }
-                  {
-                    name = "ProtonMail";
-                    url = "https://mail.proton.me/u/0/inbox";
-                  }
-                  {
-                    name = "YouTube";
-                    url = "https://www.youtube.com/";
-                  }
-                ];
-              }
-            ];
-          }
-          ];
-        };
         search.force = true;
         search.default = "ddg";
         search.privateDefault = "ddg";
