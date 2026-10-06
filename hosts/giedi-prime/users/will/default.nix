@@ -18,7 +18,7 @@
     ];
   */
 
-  home.stateVersion = "26.05";
+  #home.stateVersion = "unstable";
 
   programs.home-manager.enable = true;
 

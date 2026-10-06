@@ -9,6 +9,9 @@
     # Nix Language Server
     nil
 
+    # Opencode
+    opencode
+
   ];
 
   # Git
@@ -19,11 +22,6 @@
     user.email = "wdarragh16@gmail.com";
     };
   };
-
-  # OpenCode
-  programs.opencode = {
-    enable = true;
-  }
 
   # Vim
   programs.vim = {
