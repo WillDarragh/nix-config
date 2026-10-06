@@ -35,7 +35,7 @@
             facebook-container
           ];
         };
-        search.default = "DuckDuckGo";
+        search.default = "ddg";
         search.force = true;
         settings = {
           # Large Layout for TV
