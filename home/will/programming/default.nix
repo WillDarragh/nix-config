@@ -20,6 +20,11 @@
     };
   };
 
+  # OpenCode
+  programs.opencode = {
+    enable = true;
+  }
+
   # Vim
   programs.vim = {
     enable = true;
