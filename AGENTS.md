@@ -1,6 +1,7 @@
 # AGENTS.md
 
-Personal NixOS flake monorepo. No CI, no tests — verify changes with `nix eval`/`nix build`.
+Personal NixOS flake monorepo. No CI, no tests — verify changes with the toplevel evals under Commands.
+`BACKLOG.md` tracks open refactors; keep it out of this file.
 
 ## Hosts
 
@@ -18,7 +19,6 @@ Personal NixOS flake monorepo. No CI, no tests — verify changes with `nix eval
 - `home/will/*` — shared user modules (`desktop/`, `desktop/4k`, `programming`, `art`, ...);
   editing one affects every host that imports it
 - `modules/gaming` — shared system module imported by all three hosts
-- NUR is wired in per-host via `nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya`
 
 ## Commands
 
@@ -26,10 +26,19 @@ Deploy on the target host:
 
     sudo nixos-rebuild switch --flake .#<host>
 
-Build/eval for a host without touching another machine:
+Check all three hosts without building anything (forces full config eval):
 
-    nix build --no-link .#nixosConfigurations.<host>.config.system.build.toplevel
-    nix eval --raw .#nixosConfigurations.<host>.config.networking.hostName
+    nix eval --raw .#nixosConfigurations.arrakis.config.system.build.toplevel.drvPath 2>/dev/null
+    nix eval --raw .#nixosConfigurations.caladan.config.system.build.toplevel.drvPath 2>/dev/null
+    nix eval --raw .#nixosConfigurations.giedi-prime.config.system.build.toplevel.drvPath 2>/dev/null
+
+(2>/dev/null hides the benign "Git tree is dirty" warning; a missing path in the
+output means that host's config is broken.)
+
+Note: `nix eval` of a single option (e.g. `config.networking.hostName`) is LAZY —
+home-manager subtrees and deprecated-but-aliased system options are not touched.
+Only the toplevel `drvPath` eval catches the real breakage classes: missing
+`home.stateVersion`, obsolete option renames, bad hm option shapes.
 
 Remote deploy is conventional (not scripted here): `nix copy` the toplevel to the target,
 or run `nixos-rebuild switch --flake github:WillDarragh/nix-config#<host>` there.
@@ -39,6 +48,20 @@ or run `nixos-rebuild switch --flake github:WillDarragh/nix-config#<host>` there
 - home-manager runs as a NixOS module (`useGlobalPkgs`, `useUserPackages`, backupFileExtension "backup").
   Apply user config changes with `nixos-rebuild`, NOT standalone `home-manager switch`.
 - Never bump `system.stateVersion` or `home.stateVersion`.
+- Every user config (`hosts/*/users/*/default.nix`) must set `home.stateVersion`
+  (currently "26.11" everywhere); omission passes eval of most options and only
+  fails when the home-manager activation is built.
+- Firefox is managed via `programs.firefox.policies`, NOT profile-level options where
+  avoidable: add-ons use `policies.ExtensionSettings` with AMO `/latest/` install_url
+  (no NUR — it was deliberately removed; don't re-add a `nur` input for addons),
+  `policies.NoDefaultBookmarks = true`, and bookmarks are owned by Firefox Sync
+  (hm declarative bookmarks only import into brand-new places DBs; `force = true` is
+  just an acknowledgment, nothing re-applies them).
+- Firefox 136+ StoreID/Profile Groups migration silently orphans hm-managed profile
+  dirs — per-profile `settings`/`user.js` may never reach the live profile. Anything
+  that must apply goes in `policies` (incl. `policies.Preferences`).
+- Use `programs.vscodium`, not `programs.vscode` + `package = pkgs.vscodium` (the
+  latter warns and writes config to the wrong paths).
 - `nixpkgs.config.allowUnfree = true` is set per-host; don't add per-package unfree license waivers.
 - `nix-command` + `flakes` experimental features are enabled via `nix.settings` in each host config.
 - nixpkgs tracks `nixos-unstable` and home-manager tracks master — `nix flake update` can break
