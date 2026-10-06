@@ -13,12 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # NUR
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # NixOS Cosmic
     #nixpkgs.follows = "nixos-cosmic/nixpkgs";
     #nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
@@ -34,7 +28,6 @@
       self,
       nixpkgs,
       home-manager,
-      nur,
       #nixos-cosmic,
       ...
     }@inputs:
@@ -44,11 +37,6 @@
       nixosConfigurations.arrakis = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-
-          # Adds the NUR overlay
-          nur.modules.nixos.default
-          # NUR modules to import
-          nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya
 
           # System configuration
           ./hosts/arrakis/configuration.nix
@@ -83,11 +71,6 @@
         system = "x86_64-linux";
         modules = [
 
-          # Adds the NUR overlay
-          nur.modules.nixos.default
-          # NUR modules to import
-          nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya
-        
           # System configuration
           ./hosts/caladan/configuration.nix
 
@@ -112,11 +95,6 @@
         system = "x86_64-linux";
         modules = [
 
-          # Adds the NUR overlay
-          nur.modules.nixos.default
-          # NUR modules to import
-          nur.legacyPackages.x86_64-linux.repos.iopq.modules.xraya
-          
           # System configuration
           ./hosts/giedi-prime/configuration.nix
  
